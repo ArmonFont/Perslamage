@@ -4,6 +4,28 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="getlaid.css">
         <title>Chances of getting laid in the next hour</title>	
+        
+        <title>Device Properties Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+        element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+                            'Device Cordova: '  + device.cordova  + '<br />' +
+                            'Device Platform: ' + device.platform + '<br />' +
+                            'Device UUID: '     + device.uuid     + '<br />' +
+                            'Device Version: '  + device.version  + '<br />';
+    }
+
+    </script>
     </head>
 
     <body onload = "main()" class:"wp">
@@ -481,5 +503,7 @@ Should I go to the Bars?
 	
 	
 	<a href="GetLaidApp2.html" target="_self"><img src="nextButton.png" border="0" alt="Next""  ></a>
+	
+	<p id="deviceProperties">Loading device properties...</p>
     </body>
 </html>
