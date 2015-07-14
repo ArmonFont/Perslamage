@@ -1,0 +1,485 @@
+<!doctype html>
+<html>
+    <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="getlaid.css">
+        <title>Chances of getting laid in the next hour</title>	
+    </head>
+
+    <body onload = "main()" class:"wp">
+	
+	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '756079341171671',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+	
+	
+	
+
+        <form>
+Should I go to the Bars?
+<br></br>
+	    	    Select Gender
+	    <select style="width: 100px" id="gender" name="gender">
+    <option selected="">XXX</option> 
+  <option value="1">Male</option>
+  <option value="2">Female</option>
+	 </select>   
+	    <br></br>
+	    
+ 	    
+	    
+	    Select your University
+	    <select style="width: 300px" id="university" name="university">
+    <option selected="">XXX</option>
+  <option value=".49">Frostburg State University</option>
+  <option value=".46">Penn State, University Park</option>
+  <option value=".6">Towson University</option>
+  <option value=".55">UCLA</option>
+  <option value=".47">University of Maryland, College Park</option>
+  <option value=".95">*Fantasy Option* If my school were 95% female</option>
+  <option value=".05">*Fantasy Option* If my school were 95% male</option>
+	 </select>
+	    
+	    <br></br>
+	                Be honest, how good looking are you?
+	    <select style="width: 200px" id="mylooks" name="mylooks">
+    <option selected="">XXX</option> 
+  <option value=1>I look like road kill</option>
+  <option value=2>I'm not super good looking</option>
+  <option value=3>I'm average looking</option>
+  <option value=4>I'm fairly good looking</option>
+  <option value=5>I'm fucking gorgeous</option>
+
+	    </select>  
+	    <br></br>
+	    
+	    I want to get laid with someone that is at least... 
+	    <select style="width: 200px" id="looks" name="looks">
+    <option selected="">XXX</option> 
+  <option value=1>Breathing</option>
+  <option value=2>Bangable, but regretful</option>
+  <option value=3>Attractive enough</option>
+  <option value=4>Good looking</option>
+  <option value=5>Super hot</option>
+
+	    </select>  
+	    <br></br>
+	    
+	    How good are you at flirting? 
+	    <select style="width: 200px" id="flirt" name="flirt">
+    <option selected="">XXX</option> 
+  <option value=1>I suck</option>
+  <option value=2>I'm not good</option>
+  <option value=3>I'm okay..</option>
+  <option value=4>I can mack</option>
+  <option value=5>I'm seductive as fuck</option>
+
+	    </select>  
+	    <br></br>
+	                Select The Day (when the night started)
+	    <select style="width: 200px" id="day" name="day">
+    <option selected="">XXX</option> 
+  <option value=1>Sunday</option>
+  <option value=1>Monday</option>
+  <option value=2>Tuesday</option>
+  <option value=3>Wednesday</option>
+  <option value=3>Thursday</option>
+  <option value=4>Friday</option>
+  <option value=4>Saturday</option>
+	    </select>   
+	    
+	    </br></br>
+	               Is there a holiday or major event at your school?
+	    <select style="width: 200px" id="holiday" name="holiday">
+    <option selected="">XXX</option> 
+  <option value=1>Yes</option>
+  <option value=2>No</option>
+	    </select>  
+	    <br></br>
+	    
+	    Select Approximate Time
+	    <select style="width: 100px" id="time1" name="time1">
+    <option selected="">XXX</option> 
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+  <option>12</option>
+</select>
+	
+	    :
+	    <select style="width: 100px" id="time2" name="time2">
+  <option selected="">XXX</option> 
+  <option value="0" >00</option>
+  <option value=".5">30</option>
+</select>
+	    <select style="width: 100px" id="time3" name="time3">
+  <option selected="">XXX</option> 
+  <option value="0">am</option>
+  <option value="12">pm</option>
+</select>
+	    <br></br>
+	    Do you have enough self confidence to get laid?
+	    <select style="width: 100px" id="confidence" name="confidence">
+    <option selected="">XXX</option> 
+  <option value="1">Yes</option>
+  <option value="2">No</option>
+	 </select>   
+	    <br></br>  
+	    
+	  
+	   
+	    
+               <br></br>
+	       <input type="button" id="processNow" value="Get Laid" /><br /><br />
+	       
+	        <br></br>
+	    <input type="reset" value="Reset" /> 
+               
+        </form>
+	    
+        <script type="text/javascript">
+	    
+	 
+   
+    	    function main() {
+                var theButton = document.getElementById("processNow");
+                theButton.onclick = processInput; // DO NOT PUT ()   
+            }
+            
+            function processInput() {
+		   
+
+//gendercalcstart		
+		var gender = document.getElementById("gender");
+		
+		var genderval = gender.value;
+		
+//universityratiostart		
+		
+		var university = document.getElementById("university");
+		
+		var universityfemaleratio= university.value;
+		var universitymaleratio=1-(universityfemaleratio);
+
+		
+//daycalcstarts
+
+		var day = document.getElementById("day");
+		
+		var dayval = day.value;
+		
+		
+//timecalculationstart
+        	var time1 = document.getElementById("time1");
+		var time2 = document.getElementById("time2");
+		var time3 = document.getElementById("time3");
+		
+                var timeval1 = time1.value;
+		var timeval2 = time2.value;
+		var timeval3 = time3.value;
+		if(timeval1==12 && timeval3==12){
+		    var timeval1=0;
+		    
+		}
+		if(timeval1==12 && timeval2==0 &&timeval3==0){
+		    var timeval1=24;
+		    
+		}
+		
+		if(timeval1==12 && timeval2==.5 &&timeval3==0){
+		    var timeval1=0;
+		    
+		}
+		
+		var finaltime = parseFloat(timeval1)+parseFloat(timeval2)+parseFloat(timeval3);
+		
+		
+        	if (isNaN(finaltime)){
+		    alert("Tell us the time!!!");
+		    return;
+		}
+		
+		else if ((finaltime)>=12 && (finaltime)<20 ){
+		    var laidpercent1 = 4.375*(finaltime)- (47.5)
+		    
+		}
+		
+		else if ((finaltime)>=20 ){
+		    var laidpercent1 = 15*(finaltime)- (260)
+		    
+		}
+		
+		else if ((finaltime)>0 && (finaltime)<=4 ){
+		    var laidpercent1 = -15*(finaltime)+ (100)
+		    
+		}
+		
+		else if ((finaltime)>4 && (finaltime)<12 ){
+		    var laidpercent1 = -4.375*(finaltime)+ (57.5)
+		    
+		}
+		
+		
+
+
+
+//time&gender&school
+		if((genderval)==1){
+		    var finallaidpercent1= ((laidpercent1)*(universityfemaleratio));
+    
+		}
+
+		else if((genderval)==2){
+		    var finallaidpercent1= ((laidpercent1)*(universitymaleratio)+((laidpercent1)*(.2)));
+    
+		}
+		else 
+		{
+		    alert("Tell us your gender!")
+		    return
+		}
+		
+		if(isNaN(universitymaleratio)|| isNaN(universityfemaleratio)){
+		    alert("Select a University")
+		    return
+		}
+		
+		
+		
+//mylookscalculation
+		
+		var mylooks = document.getElementById("mylooks");
+		var mylooksval = mylooks.value;
+		
+		if((mylooksval)==1)
+		{(finallaidpercent2)=(finallaidpercent1)-((finallaidpercent1)*(0.1))
+		
+		}
+		else if((mylooksval)==2)
+		{
+		    (finallaidpercent2)=(finallaidpercent1)-((finallaidpercent1)*(0.05))
+		
+		}
+		else if((mylooksval)==3)
+		{
+		    (finallaidpercent2)=(finallaidpercent1)-((finallaidpercent1)*(0))
+		
+		}
+		else if((mylooksval)==4)
+		{
+		    (finallaidpercent2)=(finallaidpercent1)+((finallaidpercent1)*(.05))
+		
+		}
+		else if((mylooksval)==5)
+		{
+		    (finallaidpercent2)=(finallaidpercent1)+((finallaidpercent1)*(.1))
+		
+		}
+		else{
+		    alert("Tell us how good looking you are!")
+		    return
+		}
+
+		
+//theirlookscalculation
+		var looks = document.getElementById("looks");
+		var looksval = looks.value;
+		
+		if((looksval)==1)
+		{(finallaidpercent3)=(finallaidpercent2)+((finallaidpercent2)*(0.1))
+		
+		}
+		else if((looksval)==2)
+		{
+		    (finallaidpercent3)=(finallaidpercent2)+((finallaidpercent2)*(0.05))
+		
+		}
+		else if((looksval)==3)
+		{
+		    (finallaidpercent3)=(finallaidpercent2)-((finallaidpercent2)*(0))
+		
+		}
+		else if((looksval)==4)
+		{
+		    (finallaidpercent3)=(finallaidpercent2)-((finallaidpercent2)*(.05))
+		
+		}
+		else if((looksval)==5)
+		{
+		    (finallaidpercent3)=(finallaidpercent2)-((finallaidpercent2)*(.1))
+		
+		}
+		else{
+		    alert("Tell us what you're looking for!")
+		    return
+		}
+//flirt
+	    var flirt = document.getElementById("flirt");
+		var flirtval = flirt.value;
+		
+		if((flirtval)==1)
+		{(finallaidpercent4)=(finallaidpercent3)-((finallaidpercent3)*(0.13))
+		
+		}
+		else if((flirtval)==2)
+		{
+		    (finallaidpercent4)=(finallaidpercent3)-((finallaidpercent3)*(0.055))
+		
+		}
+		else if((flirtval)==3)
+		{
+		    (finallaidpercent4)=(finallaidpercent3)-((finallaidpercent3)*(0))
+		
+		}
+		else if((flirtval)==4)
+		{
+		    (finallaidpercent4)=(finallaidpercent3)+((finallaidpercent3)*(.055))
+		
+		}
+		else if((flirtval)==5)
+		{
+		    (finallaidpercent4)=(finallaidpercent3)+((finallaidpercent3)*(.13))
+		
+		}
+		else{
+		    alert("Tell us how good you are at flirting!")
+		    return
+		}
+
+//dayoftheweekcalculation
+		var day = document.getElementById("day");
+		var dayval = day.value;
+		
+		if((dayval)==1)
+		{(finallaidpercent5)=(finallaidpercent4)-((finallaidpercent4)*(0.1))
+		
+		}
+		else if((dayval)==2)
+		{
+		    (finallaidpercent5)=(finallaidpercent4)+((finallaidpercent4)*(0))
+		
+		}
+		else if((dayval)==3)
+		{
+		    (finallaidpercent5)=(finallaidpercent4)+((finallaidpercent4)*(0.05))
+		
+		}
+		else if((dayval)==4)
+		{
+		    (finallaidpercent5)=(finallaidpercent4)+((finallaidpercent4)*(.1))
+		
+		}
+		else{
+		    alert("Give us the day!")
+		    return
+		}
+
+//isitaholiday?
+		var holiday = document.getElementById("holiday");
+		var holidayval = holiday.value;
+		
+		if((holidayval)==1)
+		{(finallaidpercent6)=(finallaidpercent5)+((finallaidpercent5)*(0.1))
+		
+		}
+		else if((holidayval)==2)
+		{
+		    (finallaidpercent6)=(finallaidpercent5)-((finallaidpercent5)*(0))
+		
+		}
+		else{
+		    alert("Is there a holiday or big event today?")
+		    return
+		}
+		
+//confidence
+
+
+		var confidence = document.getElementById("confidence");
+		var confidenceval = confidence.value;
+		
+		if((confidenceval)==1)
+		{(finallaidpercent7)=(finallaidpercent6)+((finallaidpercent6)*(0.1))
+		
+		}
+		else if((confidenceval)==2)
+		{
+		    (finallaidpercent7)=(finallaidpercent6)-((finallaidpercent6)*(0.4))
+		
+		}
+		else{
+		    alert("How confident are you?")
+		    return
+		}
+//finalCalculation		
+		var finallaidpercent7= (finallaidpercent7).toFixed(2);
+		
+		if(finallaidpercent7>=99)
+		{
+		    alert("THIS IS ALMOST IMPOSSIBLE. There is no reason you can't get laid within the next hour... according to our calculations, there's over a 99% chance of you getting laid");
+		}
+		else if(finallaidpercent7>=90 && finallaidpercent7<99){
+		    alert("WTFFFF!!! THIS IS CRAZY!!! THERE'S A "+ (finallaidpercent7) + "% CHANCE OF YOU GETTING LAID WITHIN THE HOUR!!");
+		}
+		else if(finallaidpercent7>=80 && finallaidpercent7<90){
+		    alert("WHAT ARE YOU WAITING FOR?! THERE'S A WHOPPING "+ (finallaidpercent7) + "% chance of you getting laid within the next hour!!");
+		}
+		else if(finallaidpercent7>=70 && finallaidpercent7<80){
+		    alert("Wow! This is really good news. There's a very impressive "+ (finallaidpercent7) + "% chance of you getting laid within the next hour!!");
+		}
+		else if(finallaidpercent7>=60 && finallaidpercent7<70){
+		    alert("The hour is looking really bright for you! There's a "+ (finallaidpercent7) + "% chance of you getting laid within the next hour!!");
+		}
+		else if(finallaidpercent7>=50 && finallaidpercent7<60){
+		    alert("The odds are on your side!! There's an awesome "+ (finallaidpercent7) + "% chance of you getting laid within the next hour!!");
+		}
+		else if(finallaidpercent7>=40 && finallaidpercent7<50){
+		    alert("This is actually pretty good news! There's a "+ (finallaidpercent7) + "% chance of you getting laid within the next hour!!");
+		}
+		else if(finallaidpercent7>=30 && finallaidpercent7<40 ){
+		    alert("This is actually pretty good news! There's a "+ (finallaidpercent7) + "% chance of you getting laid within the next hour!!");
+		}
+		else if(finallaidpercent7>=20 && finallaidpercent7<30 ){
+		    alert("Go out and get it! There's a very solid "+ (finallaidpercent7) + "% chance of you getting laid within the next hour!!");
+		}
+		else if(finallaidpercent7>=10 && finallaidpercent7<20 ){
+		    alert("I don't know if you're optomistic or not... but a "+ (finallaidpercent7) + "% chance of getting laid within the next hour is good enough!!");
+		}
+		else if(finallaidpercent7>=0 && finallaidpercent7<10 ){
+		    alert("Life isn't fair, but that doesn't mean you can't prove your "+ (finallaidpercent7) + "% chances of getting laid wrong! Go and get it!");
+		}
+	    
+	    }
+	    
+	    
+	
+	    
+           
+    	</script>
+	
+	
+	<a href="GetLaidApp2.html" target="_self"><img src="nextButton.png" border="0" alt="Next""  ></a>
+    </body>
+</html>
