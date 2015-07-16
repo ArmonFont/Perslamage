@@ -1,31 +1,9 @@
-<!doctype html>
+!doctype html>
 <html>
     <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="getlaid.css">
         <title>Chances of getting laid in the next hour</title>	
-        
-        <title>Device Properties Example</title>
-
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        var element = document.getElementById('deviceProperties');
-        element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
-                            'Device Cordova: '  + device.cordova  + '<br />' +
-                            'Device Platform: ' + device.platform + '<br />' +
-                            'Device UUID: '     + device.uuid     + '<br />' +
-                            'Device Version: '  + device.version  + '<br />';
-    }
-
-    </script>
     </head>
 
     <body onload = "main()" class:"wp">
@@ -52,11 +30,10 @@
 	
 
         <form>
-Should I go to the Bars?
 <br></br>
 	    	    Select Gender
 	    <select style="width: 100px" id="gender" name="gender">
-    <option selected="">XXX</option> 
+    <option selected=""></option> 
   <option value="1">Male</option>
   <option value="2">Female</option>
 	 </select>   
@@ -66,7 +43,7 @@ Should I go to the Bars?
 	    
 	    Select your University
 	    <select style="width: 300px" id="university" name="university">
-    <option selected="">XXX</option>
+    <option selected=""></option>
   <option value=".49">Frostburg State University</option>
   <option value=".46">Penn State, University Park</option>
   <option value=".6">Towson University</option>
@@ -79,7 +56,7 @@ Should I go to the Bars?
 	    <br></br>
 	                Be honest, how good looking are you?
 	    <select style="width: 200px" id="mylooks" name="mylooks">
-    <option selected="">XXX</option> 
+    <option selected=""></option> 
   <option value=1>I look like road kill</option>
   <option value=2>I'm not super good looking</option>
   <option value=3>I'm average looking</option>
@@ -91,7 +68,7 @@ Should I go to the Bars?
 	    
 	    I want to get laid with someone that is at least... 
 	    <select style="width: 200px" id="looks" name="looks">
-    <option selected="">XXX</option> 
+    <option selected=""></option> 
   <option value=1>Breathing</option>
   <option value=2>Bangable, but regretful</option>
   <option value=3>Attractive enough</option>
@@ -103,7 +80,7 @@ Should I go to the Bars?
 	    
 	    How good are you at flirting? 
 	    <select style="width: 200px" id="flirt" name="flirt">
-    <option selected="">XXX</option> 
+    <option selected=""></option> 
   <option value=1>I suck</option>
   <option value=2>I'm not good</option>
   <option value=3>I'm okay..</option>
@@ -114,7 +91,7 @@ Should I go to the Bars?
 	    <br></br>
 	                Select The Day (when the night started)
 	    <select style="width: 200px" id="day" name="day">
-    <option selected="">XXX</option> 
+    <option selected=""></option> 
   <option value=1>Sunday</option>
   <option value=1>Monday</option>
   <option value=2>Tuesday</option>
@@ -127,7 +104,7 @@ Should I go to the Bars?
 	    </br></br>
 	               Is there a holiday or major event at your school?
 	    <select style="width: 200px" id="holiday" name="holiday">
-    <option selected="">XXX</option> 
+    <option selected=""></option> 
   <option value=1>Yes</option>
   <option value=2>No</option>
 	    </select>  
@@ -135,7 +112,7 @@ Should I go to the Bars?
 	    
 	    Select Approximate Time
 	    <select style="width: 100px" id="time1" name="time1">
-    <option selected="">XXX</option> 
+    <option selected=""></option> 
   <option>1</option>
   <option>2</option>
   <option>3</option>
@@ -152,19 +129,19 @@ Should I go to the Bars?
 	
 	    :
 	    <select style="width: 100px" id="time2" name="time2">
-  <option selected="">XXX</option> 
+  <option selected=""></option> 
   <option value="0" >00</option>
   <option value=".5">30</option>
 </select>
 	    <select style="width: 100px" id="time3" name="time3">
-  <option selected="">XXX</option> 
+  <option selected=""></option> 
   <option value="0">am</option>
   <option value="12">pm</option>
 </select>
 	    <br></br>
 	    Do you have enough self confidence to get laid?
 	    <select style="width: 100px" id="confidence" name="confidence">
-    <option selected="">XXX</option> 
+    <option selected=""></option> 
   <option value="1">Yes</option>
   <option value="2">No</option>
 	 </select>   
@@ -174,10 +151,12 @@ Should I go to the Bars?
 	   
 	    
                <br></br>
-	       <input type="button" id="processNow" value="Get Laid" /><br /><br />
-	       
+	       <div style="text-align:center">
+	       <input  type="button" id="processNow" value="Get Laid"  /><br /><br /><br><br>
+	       <input type="reset" value="Reset" id="Reset" /> 
+	       </div>
 	        <br></br>
-	    <input type="reset" value="Reset" /> 
+	    
                
         </form>
 	    
@@ -501,9 +480,7 @@ Should I go to the Bars?
            
     	</script>
 	
-	
+	<br>
 	<a href="GetLaidApp2.html" target="_self"><img src="nextButton.png" border="0" alt="Next""  ></a>
-	
-	<p id="deviceProperties">Loading device properties...</p>
     </body>
 </html>
